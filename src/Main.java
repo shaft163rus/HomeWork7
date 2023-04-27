@@ -38,6 +38,8 @@ public class Main {
             System.out.print(j + " ");
         }
 
+        System.out.println("\n");
+
     }
 
     public static void task3() {
