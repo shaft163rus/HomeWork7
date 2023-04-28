@@ -82,12 +82,11 @@ public class Main {
         int monthCount = 0;
 
         while (deposit <= targetAmount) {
-            for (int i = 1; i <= 6; i++) {
-                deposit = deposit + deposit * depositInterest;
+            deposit = deposit + deposit * depositInterest;
+            monthCount++;
+            if (monthCount % 6 == 0) {
+                System.out.printf("За месяц %d сумма накоплений %.2f руб.\n", monthCount, deposit);
             }
-
-            monthCount += 6;
-            System.out.printf("За месяц %d сумма накоплений %.2f руб.\n", monthCount, deposit);
         }
     }
 
@@ -102,11 +101,11 @@ public class Main {
         int depositTerm = 9 * 12;
 
         do {
-            for (int i = 1; i <= 6; i++) {
-                deposit = deposit + deposit * depositInterest;
+            deposit = (deposit + deposit * depositInterest);
+            monthCount++;
+            if (monthCount % 6 == 0) {
+                System.out.printf("За месяц %d сумма накоплений %.2f руб.\n", monthCount, deposit);
             }
-            monthCount += 6;
-            System.out.printf("За месяц %d сумма накоплений %.2f руб.\n", monthCount, deposit);
         }
         while (monthCount <= depositTerm);
 
@@ -130,7 +129,7 @@ public class Main {
         int endYear = 2123;
         int flyPeriod = 79;
 
-        for (int i = startYear - startYear % flyPeriod; i <= endYear; i+=flyPeriod) {
+        for (int i = startYear - startYear % flyPeriod; i <= endYear; i += flyPeriod) {
             if (i >= startYear) {
                 System.out.println(i);
             }
@@ -145,7 +144,7 @@ public class Main {
         int endYear = 2123;
         int flyPeriod = 79;
 
-        for (int i = 0; i <= endYear; i+=flyPeriod) {
+        for (int i = 0; i <= endYear; i += flyPeriod) {
             if (i >= startYear) {
                 System.out.println(i);
 
