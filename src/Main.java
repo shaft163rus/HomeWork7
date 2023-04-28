@@ -8,6 +8,7 @@ public class Main {
         task6();
         task7();
         task8();
+        task8Var2();
 
     }
 
@@ -132,6 +133,22 @@ public class Main {
         for (int i = startYear - startYear % flyPeriod; i <= endYear; i+=flyPeriod) {
             if (i >= startYear) {
                 System.out.println(i);
+            }
+        }
+
+    }
+
+
+    public static void task8Var2() {
+        System.out.println("Task8");
+        int startYear = 1823;
+        int endYear = 2123;
+        int flyPeriod = 79;
+
+        for (int i = 0; i <= endYear; i+=flyPeriod) {
+            if (i >= startYear) {
+                System.out.println(i);
+
             }
         }
 
